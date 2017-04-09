@@ -11,6 +11,5 @@ jobs:
     type: runSh
     steps:
       - IN: rsync_test_gitRepo
-      - IN: echo true
       - TASK:
         - script: printenv
