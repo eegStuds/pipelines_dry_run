@@ -6,3 +6,10 @@ jobs:
       - IN: nginx-image-1
       - IN: nginx-image-2
       - TASK: managed
+
+  - name: sample-runSh
+    type: runSh
+    steps:
+      - IN: rsync_test_gitRepo
+      - TASK:
+        - script: printenv
