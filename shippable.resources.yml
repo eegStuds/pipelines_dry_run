@@ -22,6 +22,9 @@ resources:
     pointer:
       sourceName: ankul-shippable/pipelines_dry_run
       branch: "master"
+      branches:
+        only:
+          - v1.*
       buildOnTagPush: true #normally false by default
       buildOnPullRequest: false #since this is true by default
       buildOnCommit: false #since this is true by default
