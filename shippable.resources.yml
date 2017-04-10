@@ -21,7 +21,7 @@ resources:
     integration: github-subint
     pointer:
       sourceName: ankul-shippable/pipelines_dry_run
-      branch: "master"
+      branch: "master2"
       branches:
         only:
           - v1.*
