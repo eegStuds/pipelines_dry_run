@@ -1,0 +1,22 @@
+language: node_js
+
+build:
+  ci: 
+    - echo "ci"
+    - echo "versionName=branch_$BRANCH.$BUILD_NUMBER" >> $JOB_STATE/img-1.env
+    - sudo docker ps
+  
+  jobs:
+    - name: pipelines_dry_run_runCI
+      type: runCI
+      steps:
+        - OUT: img-1
+        
+  resources:
+  - name: img-1
+    type: image
+    integration: "docker-subint"
+    pointer:
+      sourceName: "ankul/nginx"
+    seed:
+      versionName: prod.10
