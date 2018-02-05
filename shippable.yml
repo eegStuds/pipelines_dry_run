@@ -6,13 +6,13 @@ build:
     - echo "versionName=branch_$BRANCH.$BUILD_NUMBER" >> $JOB_STATE/img-1.env
     - sudo docker ps
   
-  jobs:
-    - name: pipelines_dry_run_runCI
-      type: runCI
-      steps:
-        - OUT: img-1
+jobs:
+  - name: pipelines_dry_run_runCI
+    type: runCI
+    steps:
+      - OUT: img-1
         
-  resources:
+resources:
   - name: img-1
     type: image
     integration: "docker-subint"
